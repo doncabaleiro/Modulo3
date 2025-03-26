@@ -9,7 +9,7 @@
 <body>
     <a href="#main" class="skip-link">Ir al contenido principal</a>
     <header class="fixed-top d-flex items-center">
-       <nav class="d-flex items-center cont-width" aria-label="Navegación principal">
+       <nav class="d-flex items-center cont-width" aria-label="Principal">
         <div class="d-flex items-center flex-1">
             <a href="#header" aria-label="Ir al inicio" class="brand-width">
                 <img src="img/logo.jpeg" alt="">
@@ -21,22 +21,20 @@
             </ul>
         </div>
         <div>
-            <a href="#" class="reservar">¡Reserva una mesa!</a>
+            <a href="#reservar" class="reservar" aria-label="Reserva una mesa">¡Reserva una mesa!</a>
         </div>
        </nav>
     </header>
     
-        <section id="hero" aria-labelledby="hero">
-            <div class="hero">
+        <section id="hero" class="hero">
             <h1>Pinsa mia</h1>
             <p>Disfruta de la mejor pinsa romana el corazón de Madrid.</p>
             <div class="button-container">
-                <a href="#menu">Menú</a>
-                <a href="#reservar" class="reservar">¡Reserva una mesa!</a>
-            </div>
+                <a href="#main">Menú</a>
+                <a href="#reservar" class="reservar" aria-label="Reserva una mesa">¡Reserva una mesa!</a>
             </div>
         </section>
-        <main id="main" class="cont-width">
+        <main id="main">
             <h2 class="menu-title">Menú</h2>
             <ul class="menu cont-width">
                 <li class="dish">
@@ -46,7 +44,7 @@
                         <span aria-label="Precio">12€</span>
                     </div>
                     <div class="menu-ingredients" aria-label="Ingredientes">
-                        <p>Tomate y <span lang="it">mozarella</span></p>
+                        <p>Tomate y mozarela</p>
                     </div>
                 </li>
                 <li class="dish">
@@ -56,7 +54,7 @@
                         <span aria-label="Precio">15€</span>
                     </div>
                     <div class="menu-ingredients" aria-label="Ingredientes">
-                        <p>Tomate, <span lang="it">mozarella</span>, crema de burrata, salsa pesto y parmesano</p>
+                        <p>Tomate, mozarela, crema de burrata, salsa pesto y parmesano</p>
                     </div>
                 </li>
                 <li class="dish">
@@ -66,17 +64,17 @@
                         <span aria-label="Precio">16€</span>
                     </div>
                     <div class="menu-ingredients" aria-label="Ingredientes">
-                        <p>Tomate, <span lang="it">mozarella</span> y chorizo picante</p>
+                        <p>Tomate, mozarela y chorizo picante</p>
                     </div>
                 </li>
                 <li class="dish">
                     <img src="img/pinsa1.jpg" alt="">
                     <div class="menu-content">
-                        <h3>Pinsa <span lang="it">Prosciutto Funghi</span></h3>
+                        <h3>Pinsa Prosciutto Funghi</h3>
                         <span aria-label="Precio">14€</span>
                     </div>
                     <div class="menu-ingredients" aria-label="Ingredientes">
-                        <p>Tomate, <span lang="it">mozarella</span>, jamón york y champiñones</p>
+                        <p>Tomate, mozarela, jamón york y champiñones</p>
                     </div>
                 </li>
                 <li class="dish">
@@ -86,10 +84,59 @@
                         <span aria-label="Precio">18€</span>
                     </div>
                     <div class="menu-ingredients" aria-label="Ingredientes">
-                        <p>Tomate, <span lang="it">mozarella</span>, berenjena y parmesano</p>
+                        <p>Tomate, mozarela, berenjena y parmesano</p>
                     </div>
                 </li>
             </ul>
         </main>
+
+
+        <section id="reservar" class="form-section">
+
+            <form id="validacionFormulario" aria-label="Formulario de reserva">
+                <h2>Reserva una mesa</h2>
+                <div id="resumenErrores" tabindex="-1" role="group" aria-labelledby="encabezado_errores">
+                </div>
+                <div class="campo50-1">
+                    <label for="fechaReserva">Fechaa</label>
+                <input type="date" id="fechaReserva" name="fechaReserva" required>
+                </div>
+                <div class="campo50-1">    
+                    <label for="horaReserva">Hora</label>
+                <select id="horaReserva" name="horaReserva" required>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30">21:30</option>
+                    <option value="22:00">22:00</option>
+                    <option value="22:30">22:30</option>
+                </select>
+                </div>
+                <div class="campo50-2">
+                    <label for="numeroPersonas">Comensales</label>
+                <input type="number" min="1" id="numeroPersonas" name="numeroPersonas" value="1" required>
+                </div>
+                <div class="campo">
+                    <label for="nombreUsuario">Nombre</label>
+                    <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+                </div>
+                <div class="campo">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="campo">
+                    <label for="telefonoPersonas">Teléfono</label>
+                    <input type="text" id="telefonoPersonas" name="telefonoPersonas" required>
+                </div>
+                <button type="button" id="btnEnviar">Reservar</button>
+              </form>
+              
+            
+            
+        </section>
+        <script src="script/script.js"></script>  
+
 </body>
 </html>

@@ -3,20 +3,20 @@ body {
     background: #FEFEFE;
     font-size: 1.1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #342F2F;
 }
 
- .focus{
+.focus{
     outline: 2px;
     outline-offset: .25rem;
  }
- .cont-width{
+.cont-width{
     width: 90%;
     margin: 0 auto;
 }
 :focus{
-    border: 2px #9F0000 solid;
-    padding: 1px;
-    border-inline: #ffffff solid 2px;
+    border: 2px solid;
+    /*padding: 1px;*/
 }
 
 /*Saltar a contenido principal */
@@ -78,10 +78,12 @@ nav, ol, ul, li{
 .nav-li a{
     text-decoration: none;
     color: #025C1E;
+    padding: 4px;
 }
 .nav-li a:hover{
     background-color: #025C1E;
     color: #ffffff;
+    padding: 4px;
 }
 .reservar {
     display: inline-block;
@@ -99,19 +101,18 @@ nav, ol, ul, li{
 section{margin: 0 auto;}
  /*HERO*/
  #hero{
-    width: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
  }
  .hero {
-    background-image: url('ruta-a-tu-imagen-de-fondo.jpg'); /* Cambia esto por la ruta de tu imagen */
-    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-    background-position: center; /* Centra la imagen */
-    display: flex; /* Utiliza flexbox para centrar el contenido */
-    flex-direction: column; /* Coloca los elementos en columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    /*height: 32vh; */
+    /*background-image: url('ruta-a-tu-imagen-de-fondo.jpg');*/
+    background-size: cover;
+    background-position: center; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    height: 24vh; 
     text-align: center; /* Alinea el texto al centro */
 }
 .hero image {opacity: 0.5;}
@@ -127,6 +128,7 @@ section{margin: 0 auto;}
     margin: 20px 0;
     padding: 0 16px;
     color: #342f2f;
+    text-align: center;
 }
 .button-container {
     display: flex; /* Utiliza flexbox para alinear los botones horizontalmente */
@@ -164,8 +166,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 48vh;
     text-align: center;
+    background-color: #FCF9EB;
 }
 .menu {
     display: flex;
@@ -228,7 +230,7 @@ h3 {
 
 p {
     margin: 5px 0 10px;
-    font-size: 14px;
+    font-size: 16px;
     text-align: left;
 }
 
@@ -236,3 +238,106 @@ span {
     font-weight: bold;
     font-size: 16px;
 }
+/*RESERVA*/
+section {
+    padding: 20px;
+    text-align: left;
+}
+.cta-buttons button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.btn-menu {
+    background-color: #6c757d;
+}
+.btn-reserve {
+    background-color: #dc3545;
+}
+.form-section {
+    background-image: url('../img/HeroImg.png'); /* Cambiar por la URL de la imagen */
+    background-size: cover;
+    padding: 40px;
+    color: #342f2f;
+}
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    display: block;
+    width: 450px;
+    margin: 0 auto;
+}
+label {
+    margin: 5px 0 10px;
+    font-size: 16px;
+    text-align: left;
+}
+input, select {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button[type="submit"] {
+    background-color: #9F0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 450px;
+    margin: 20px 0;
+    padding: 20px 0;
+    font-size: 1.1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button[type="button"] {
+    background-color: #9F0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 450px;
+    margin: 20px 0;
+    padding: 20px 0;
+    font-size: 1.1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.campo50-1 {
+    margin-bottom: 20px;
+    width: 30%;
+    float: left;
+    padding-right: 20px;
+}
+.campo50-2 {
+    margin-bottom: 20px;
+    width: 29%;
+    float: left;
+}
+.campo {
+    margin-bottom: 20px;
+    float: left;
+    width: 99%;
+}
+#resumenErrores {
+    color: #9F0000;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffe6e6;
+    display: none;
+    border-radius: 5px;
+  }
+  
+  #resumenErrores a {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  #resumenErrores li{
+    list-style: auto;
+  }
