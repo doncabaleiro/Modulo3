@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi restaurante</title>
+    <title>Pinsa restaurante, Menú y reservas</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <a href="#main" class="skip-link">Ir al contenido principal</a>
-    <header class="fixed-top d-flex items-center">
+    <header id="header" class="fixed-top d-flex items-center">
        <nav class="d-flex items-center cont-width" aria-label="Principal">
         <div class="d-flex items-center flex-1">
             <a href="#header" aria-label="Ir al inicio" class="brand-width">
-                <img src="img/logo.jpeg" alt="">
+                <img src="img/logoLight.jpg" alt="">
             </a>
             <ul class="items-center nav-li">
                 <li><a href="#">Home</a></li>
                 <li><a href="#main">Menú</a></li>
-                <li><a href="#">Valoraciones</a></li>
             </ul>
         </div>
         <div>
@@ -43,9 +42,7 @@
                         <h3>Pinsa Margarita</h3>
                         <span aria-label="Precio">12€</span>
                     </div>
-                    <div class="menu-ingredients" aria-label="Ingredientes">
-                        <p>Tomate y mozarela</p>
-                    </div>
+                        <p class="menu-ingredients" aria-label="Ingredientes">Tomate y mozarela</p>
                 </li>
                 <li class="dish">
                     <img src="img/pinsa1.jpg" alt="">
@@ -53,9 +50,7 @@
                         <h3>Pinsa Pesto</h3>
                         <span aria-label="Precio">15€</span>
                     </div>
-                    <div class="menu-ingredients" aria-label="Ingredientes">
-                        <p>Tomate, mozarela, crema de burrata, salsa pesto y parmesano</p>
-                    </div>
+                        <p class="menu-ingredients" aria-label="Ingredientes">Tomate, mozarela, crema de burrata, salsa pesto y parmesano</p>
                 </li>
                 <li class="dish">
                     <img src="img/pinsa1.jpg" alt="">
@@ -63,9 +58,23 @@
                         <h3>Pinsa Diavola</h3>
                         <span aria-label="Precio">16€</span>
                     </div>
-                    <div class="menu-ingredients" aria-label="Ingredientes">
-                        <p>Tomate, mozarela y chorizo picante</p>
+                        <p class="menu-ingredients" aria-label="Ingredientes">Tomate, mozarela y chorizo picante</p>
+                </li>
+                <li class="dish">
+                    <img src="img/pinsa1.jpg" alt="">
+                    <div class="menu-content">
+                        <h3>Pinsa Tartufata</h3>
+                        <span aria-label="Precio">16€</span>
                     </div>
+                        <p class="menu-ingredients" aria-label="Ingredientes">Crema de boletus, mozarela, crema de burrata y trufas</p>
+                </li>
+                <li class="dish">
+                    <img src="img/pinsa1.jpg" alt="">
+                    <div class="menu-content">
+                        <h3>Pinsa Zuca</h3>
+                        <span aria-label="Precio">16€</span>
+                    </div>
+                        <p class="menu-ingredients" aria-label="Ingredientes">Crema de calabaza, mozarela y panceta</p>
                 </li>
                 <li class="dish">
                     <img src="img/pinsa1.jpg" alt="">
@@ -73,9 +82,15 @@
                         <h3>Pinsa Prosciutto Funghi</h3>
                         <span aria-label="Precio">14€</span>
                     </div>
-                    <div class="menu-ingredients" aria-label="Ingredientes">
-                        <p>Tomate, mozarela, jamón york y champiñones</p>
+                        <p class="menu-ingredients" aria-label="Ingredientes">Tomate, mozarela, jamón york y champiñones</p>
+                </li>
+                <li class="dish">
+                    <img src="img/pinsa1.jpg" alt="">
+                    <div class="menu-content">
+                        <h3>Pinsa Mediterranea</h3>
+                        <span aria-label="Precio">14€</span>
                     </div>
+                        <p class="menu-ingredients" aria-label="Ingredientes">Tomate, mozarela, berenjenas, cebolla, aceitunas y pimientos</p>
                 </li>
                 <li class="dish">
                     <img src="img/pinsa1.jpg" alt="">
@@ -83,14 +98,10 @@
                         <h3>Pinsa Parmesana</h3>
                         <span aria-label="Precio">18€</span>
                     </div>
-                    <div class="menu-ingredients" aria-label="Ingredientes">
-                        <p>Tomate, mozarela, berenjena y parmesano</p>
-                    </div>
+                        <p class="menu-ingredients" aria-label="Ingredientes">Tomate, mozarela, berenjena y parmesano</p>
                 </li>
             </ul>
         </main>
-
-
         <section id="reservar" class="form-section">
 
             <form id="validacionFormulario" aria-label="Formulario de reserva">
@@ -104,6 +115,7 @@
                 <div class="campo50-1">    
                     <label for="horaReserva">Hora</label>
                 <select id="horaReserva" name="horaReserva" required>
+                    <option value="">Selecciona hora </option>
                     <option value="19:00">19:00</option>
                     <option value="19:30">19:30</option>
                     <option value="20:00">20:00</option>
@@ -132,11 +144,43 @@
                 </div>
                 <button type="button" id="btnEnviar">Reservar</button>
               </form>
-              
-            
             
         </section>
         <script src="script/script.js"></script>  
+
+        <footer>
+            <div>
+                <a href="#header" aria-label="Ir al inicio" class="brand-width">
+                    <img src="img/logoGreen.jpg" alt="">
+            </a>
+            </div>
+
+            <nav class="d-flex-footer items-center cont-width" aria-label="Pie de página">
+                <div class="d-flex items-center flex-1 deco-footer">
+                    
+                    <ul class="items-center nav-li-footer">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#main">Menú</a></li>
+                        <li><a href="#reservar">Reservar una mesa</a></li>
+                    </ul>
+                   
+                    
+                </div>
+                <div class="d-flex items-center flex-1 deco-footer">
+                    <ul class="items-center nav-li-footer">
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Términos de condiciones</a></li>
+                        <li><a href="#">Declaración de accesibilidad</a></li>
+                    </ul>
+                    
+                </div>
+                
+                
+               </nav>
+
+
+
+        </footer>
 
 </body>
 </html>
