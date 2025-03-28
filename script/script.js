@@ -64,7 +64,8 @@ document.getElementById("btnEnviar").addEventListener("click", function (e) {
       resumenErrores.style.display = "block";
       resumenErrores.focus();
     } else {
-      alert("Reserva realizada con");
+      alert("Reserva realizada con ´éxito");
     }
   });
+  
   
